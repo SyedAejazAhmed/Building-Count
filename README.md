@@ -6,10 +6,15 @@ This Python system automatically detects buildings in satellite/aerial images us
 
 1. **Run the setup script:**
    ```bash
-   ./setup.bat
+   setup.bat
    ```
 
-2. **Process images and view results:**
+2. **Test the system (optional but recommended):**
+   ```bash
+   python test_system.py
+   ```
+
+3. **Process images and view results:**
    ```bash
    python result.py
    ```
@@ -47,6 +52,22 @@ To process your own images:
 - **Numbered Visualization**: Creates images with numbered buildings for easy identification
 - **CSV Results**: Generates detailed CSV files with building counts and areas
 - **Summary Statistics**: Provides comprehensive analysis and visualizations
+- **GUI**: A simple graphical user interface is available by running `python building_detector_gui.py`.
+- **System Tests**: A test script `test_system.py` is included to verify the installation and functionality.
+
+## Testing the System
+
+To ensure the system is set up correctly and all dependencies are installed, you can run the test script:
+
+```bash
+python test_system.py
+```
+
+This script will perform the following checks:
+- Verify that all required Python packages (OpenCV, NumPy, Pandas, Matplotlib) are installed.
+- Check if the `Massachusetts labels/` input folder exists and contains images.
+- Ensure that the `building_detector.py` module can be imported correctly.
+- Run a sample detection on a single image to confirm the processing pipeline is working.
 
 ## Output Structure
 
@@ -112,3 +133,4 @@ The system requires Python packages that will be automatically installed during 
 **Detection Issues:**
 - Make sure your TIFF files are in the `Massachusetts labels/` folder
 - Verify image files are not corrupted
+- Run `python test_system.py` to diagnose potential issues.
